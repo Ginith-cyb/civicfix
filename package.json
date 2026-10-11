@@ -1,0 +1,8 @@
+{
+  "name": "civicfix",
+  "version": "1.0.0",
+  "description": "CivicFix - report and track local problems (potholes, streetlights, garbage).",
+  "private": true,
+  "engines": { "node": ">=22.13" },
+  "scripts": { "start": "node server.js", "seed": "node seed.js", "test": "node tests/smoke.js" }
+}
