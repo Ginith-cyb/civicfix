@@ -3,7 +3,7 @@ const { db, DATA, CATS, DEFAULTS, settings } = require('./db');
 const http = require('node:http'), fs = require('node:fs'), path = require('node:path'), crypto = require('node:crypto');
 const { promisify } = require('node:util');
 const scrypt = promisify(crypto.scrypt);
-const E = process.env, PORT = +E.PORT || 3000, HOST = E.HOST || '127.0.0.1';
+const E = process.env, PORT = +E.PORT || 3000, HOST = E.HOST || '0.0.0.0';
 const SECURE = E.COOKIE_SECURE === '1', PROXY = E.TRUST_PROXY === '1', PUB = path.join(__dirname, 'public');
 const COOKIE = SECURE ? '__Host-sid' : 'sid', WEEK = 7 * 86400000;
 
